@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN FITNESS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="icons8-dumbbell-100.png" alt="Logo" class="logo-icon">
+                <span class="logo-text">
+                    <span class="green">GREEN</span>
+                    <span class="blue">FITNESS</span>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="membership.html" class="nav-link">Memberships</a>
+                <a href="trainers.html" class="nav-link">Trainers</a>
+                <a href="shedule.html" class="nav-link">Schedule</a>
+                <a href="profile.php" class="profile-icon">
+                    <img src="user(3).png" alt="Profile">
+                </a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to GREEN FITNESS</h1>
+                <p class="hero-subtitle">Experience the best fitness journey with us.</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn-primary">About Us</a>
+                    <a href="schedule.html" class="btn-secondary">View Schedule</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-of-exercise">
+            <h2 class="section-title">BENEFITS OF REGULAR EXERCISE</h2>
+            <p class="benefits-intro">Exercise is defined as any physical activity that makes your muscles work and requires your body to burn calories. Living an active way of life also offers a plethora of health benefits, which in turn have a positive impact on both the mental and physical well-being; indeed, it could make you live longer.</p>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <img src="smile(1).png" alt="Physical Health Icon" class="benefits-icon">
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Improved Physical Health</h3>
+                        <p class="benefits-details">Regular exercise strengthens the cardiovascular system, improves muscle tone, and enhances overall physical fitness. It also helps in maintaining a healthy weight and can prevent or manage chronic diseases such as heart disease, diabetes, and obesity.</p>
+                    </div>
+                </li>
+
+                <li class="benefit-item">
+                    <img src="healthcare.png" alt="Mental Health Icon" class="benefits-icon">
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Better Mental Health and Reduced Stress</h3>
+                        <p class="benefits-details">Physical activity stimulates the production of endorphins, which are natural mood lifters. Regular exercise can also reduce symptoms of anxiety and depression, and improve overall mental well-being.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <img src="thunderbolt.png" alt="Energy Levels Icon" class="benefits-icon">
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Boosted Energy Levels and Stamina</h3>
+                        <p class="benefits-details">Regular physical activity improves cardiovascular health and increases stamina. Over time, this leads to higher energy levels and improved overall performance in daily activities.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="bmi-section">
+            <div class="bmi-description">
+                <h2>What is BMI?</h2>
+                <p>Body Mass Index (BMI) is a measurement that uses your height and weight to estimate your body fat. It is a simple and widely used method for assessing whether you are in a healthy weight range. Although BMI does not directly measure body fat, it is a useful screening tool to categorize weight status and potential health risks.</p>
+            </div>
+            <div class="bmi-calculator">
+                <h2>BMI Calculator</h2>
+                <form id="bmi-form">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight" required>
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" name="height" required>
+                    <button type="submit">Calculate BMI</button>
+                    <div id="bmi-result"></div>
+                </form>
+            </div>
+        </section>
+
+<div id="bmi-popup" class="bmi-popup">
+    <div class="bmi-popup-content">
+        <span id="bmi-popup-close" class="bmi-popup-close">&times;</span>
+        <h2>Your BMI Result</h2>
+        <p>Your BMI is <span id="bmi-popup-bmi"></span></p>
+        <p>Category: <span id="bmi-popup-category"></span></p>
+    </div>
+</div>
+
+
+        <footer class="footer">
+            <p>&copy; 2024 GREEN FITNESS. All rights reserved.</p>
+            <p>Email: <a href="mailto:contact@greenfitness.com" class="footer-link">contact@greenfitness.com</a></p>
+        </footer>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
