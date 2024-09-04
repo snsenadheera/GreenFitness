@@ -1,0 +1,851 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Inter', Poppins;
+    background-color: rgb(0, 0, 0); /* Background color */
+    color: #1e1e1e; /* Foreground color */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background-color: transparent;
+    color: #2F9755; /* Primary foreground */
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and nav items */
+    position: relative;
+    z-index: 1; /* Ensure header is above other content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-family: 'Inter', Poppins;
+    font-size: 35px; /* Adjust as needed */
+    
+  }
+  
+  .green {
+    color: #2F9755; /* Green color */
+    font-weight: 650;
+  }
+  
+  .blue {
+    color: #ffffff ;
+    font-weight: 650; /* Blue color */
+  }
+  
+
+.nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff; /* Primary foreground */
+    font-weight: 700; /* Increased font weight */
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #f0f4f8; /* Light color on hover */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); /* Shadow effect for smooth bolding */
+    transform: scale(1.10); /* Slight zoom effect */
+}
+
+.nav-button {
+    background-color: #2F9755; /* Primary foreground */
+    color: #ffffff; /* Primary color */
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 900;
+    transition: background-color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ffffff; /* Darkened primary color */
+    color: #2F9755; /* Primary foreground */
+    transform: scale(1.05); /* Zoom effect */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); /* Shadow effect for smooth bolding */
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.profile-icon img {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px; /* Space between login button and profile icon */
+}
+
+.menu-button {
+    display: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('anastase-maragos-4dlhin0ghOk-unsplash.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    text-align: left; /* Align text to the left */
+    color: #b6d9f0; /* Primary foreground */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1; /* Ensure overlay is above the background but below text */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.hero-title {
+    font-size: 48px; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #2F9755;
+}
+.lightning { animation-name: lightning }
+@keyframes lightning {
+    from, 50%, to { opacity: 1 }
+    25%, 75% { opacity: 0 }
+}
+
+.hero-subtitle {
+    font-size: 24px; /* Adjust as needed */
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px; /* Space between buttons */
+}
+
+.btn-primary {
+    background-color: #2F9755; /* Primary color */
+    color: #ffffff; /* Primary foreground */
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color:#2F9755; /* Darkened primary color */
+    transform: scale(1.20); /* Zoom effect */
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Shadow effect for smooth bolding */
+}
+
+.btn-secondary {
+    background-color: #ffffff; /* Secondary color */
+    color: #22C55E; /* Secondary foreground */
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff; /* Darkened secondary color */
+    transform: scale(1.20); /* Zoom effect */
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Shadow effect for smooth bolding */
+}
+
+/* Keyframes for Icons */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-500px); /* Start from 500px to the left */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* End visible */
+    }
+}
+
+/* Benefits of Exercise Section */
+.benefits-of-exercise {
+    padding: 40px 20px;
+    background-color: #F4F4F5; /* Background color */
+    color:   #000000; /* Foreground color */
+    text-align: center; /* Center-align text */
+}
+.benefit-content{
+    color:#CCCFD3;
+
+}
+
+.benefits-of-exercise .section-title {
+    font-size: 32px; /* Title size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.benefits-intro {
+    font-size: 18px;
+    margin-bottom: 30px; /* Increased space below the intro text */
+    line-height: 1.6; /* Line height for improved readability */
+}
+
+/* Benefit Card Styles */
+.benefit-item {
+    background-color: #000000;
+    padding: 20px; /* Space inside the card */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Adjust the max-width as needed */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.benefit-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+
+.benefits-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateX(-50px); /* Start from the left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.benefits-icon.animate {
+    opacity: 1; /* End visible */
+    transform: translateX(0); /* End at the original position */
+}
+
+.benefits-title,
+.benefits-intro {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start from below */
+    transition: opacity 0.6s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.benefits-title.animate,
+.benefits-intro.animate {
+    opacity: 1; /* End visible */
+    transform: translateY(0); /* End at the original position */
+}
+
+.benefits-details {
+    font-size: 16px; /* Font size for details */
+    line-height: 1.5; /* Improved readability */
+    color: #f0f4f8; /* Ensure details color matches the design */
+}
+
+/* Optional: Center the benefits list on larger screens */
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 0;
+    list-style: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .benefit-item {
+        width: 100%;
+    }
+
+    .benefit-content {
+        max-width: calc(100% - 64px);
+    }
+}
+
+.bmi-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: rgb(0, 0, 0); /* Light background color */
+    color: #ffffff; /* Text color */
+    gap: 20px; /* Space between description and calculator */
+}
+
+.bmi-description, .bmi-calculator {
+    flex: 1; /* Allow both sections to grow equally */
+}
+
+.bmi-description h2, .bmi-calculator h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.bmi-description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bmi-calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bmi-calculator label {
+    font-size: 16px;
+}
+
+.bmi-calculator input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.bmi-calculator button {
+    padding: 10px;
+    background-color: #2F9755; /* Button color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+.bmi-calculator button:hover {
+    background-color: #2F9755; /* Darken on hover */
+    transform: scale(1.05);
+}
+
+#bmi-result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.bmi-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.bmi-popup-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    color:rgb(255, 252, 252);
+}
+
+.bmi-popup-close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.bmi-popup-close:hover,
+.bmi-popup-close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: transparent; /* Primary color */
+    color: #2F9755; /* Primary foreground */
+    padding: 16px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: #b6d9f0; /* Footer link color */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1; /* End visible */
+    }
+}
+.schedule-page .container {
+    display: flex;
+    flex-direction: row; /* Align boxes horizontally */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center align horizontally */
+    gap: 20px; /* Space between boxes */
+    padding: 20px; /* Padding around the container */
+}
+
+.schedule-page .box {
+    background-color: #ffffff; /* White background for boxes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #145214; /* Green border for accent */
+    animation: slideLeft 1s ease-out infinite; /* Loop animation */
+}
+
+
+.schedule-page .box h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #145214; /* Green text for headers */
+}
+
+.schedule-page .box p {
+    font-size: 1em;
+    color: #555;
+}
+
+.schedule-page .box button {
+    background-color: #4CAF50; /* Green button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-page .box button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.schedule-page .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.schedule-page h1 {
+    text-align: center;
+    color: #2F9755; /* Ensure the color matches your design */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.schedule-page p {
+    text-align: none;
+    color: rgb(255, 255, 255); /* Ensure the color matches your design */
+    margin: 0 auto; /* Center align paragraph with auto margins */
+    max-width: 1200px; /* Optional: set a max-width for better readability */
+    padding-bottom: 25px;
+}
+.about {
+    padding: 30px;
+    margin: 30px;
+    padding-top: 60px;
+}
+
+.leftpanel {
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden; 
+}
+
+.rightpanel {
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.col {
+    height: 270px;
+    width: 100px;
+    margin: 15px; 
+    opacity: 0; 
+    background-position: right;
+    transform: translateX(0px); 
+    animation: slideIn 1s forwards; 
+    z-index: 1; 
+}
+
+.col:nth-child(1) {
+    animation-delay: 1s; 
+}
+
+.col:nth-child(2) {
+    animation-delay: 1.5s; 
+}
+
+.col:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.bbimg {
+    height: 270px; /* Match the height of .col */
+    width: 100px; /* Match the width of .col */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start position */
+    animation: slideUp 1s forwards; /* Trigger animation */
+    animation-delay: 3s; /* Delay to start after panels have arrived */
+    position: absolute; /* Position relative to the parent */
+    z-index: 2; /* Ensure .bbimg is above .col */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        background-position: left;
+        
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.aboutustitle {
+    color: #2F9755;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Start position */
+    animation: slideUp 1s forwards; /* Trigger animation */
+}
+
+.aboutusp {
+    color: #9DBA9A;
+    text-align: justify;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Start position */
+    animation: slideUp 1.2s forwards; /* Trigger animation with a delay */
+}
+
+.col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bbimg{
+    padding-right: 252px;
+    padding-bottom: 23px;
+}
+.bbimg img {
+    height: 283px; /* Ensure it matches the height of .col */
+    object-fit: cover;
+    
+}
+/* Trainer Grid Styles */
+.trainers {
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 40px;
+}
+.trainertitle{
+    color: #2F9755;
+    font-size: 25px;
+}
+.trainer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.trainer-card {
+    padding-top: 20px;
+    perspective: 1000px; /* This property is needed for the 3D effect */
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.trainer-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.trainer-card:hover .trainer-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.trainer-card-front,
+.trainer-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-card-front {
+    background-color: #fff;
+}
+
+.trainer-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trainer-card-back {
+    background-color: #f0f4f8;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.trainer-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.trainer-title {
+    font-size: 16px;
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+
+.trainer-specialization {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.trainers-description {
+    background-color: #9DBA9A;
+    color: #09330b;
+    padding: 20px;
+    margin: 20px 0;
+    margin-top: 80px;
+    text-align:justify;
+    justify-content: center;
+}
+.buy-now-btn {
+    background-color: #2F9755;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+.trainerbuy{
+    font-size:x-small;
+    color: red;
+    text-align: justify;
+}
+
+.buy-now-btn:hover {
+    background-color: #28a745;
+}
+
+.members {
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+.members h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2F9755;
+}
+
+.members p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align:center;
+    padding:20px;
+}
+
+/* Membership Pricing Styles */
+.membership-pricing {
+    margin: 0 0;
+    text-align: center;
+}
+
+.membership-pricing h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #2F9755;
+    padding-bottom: 20px;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.pricing-option {
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.pricing-option h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2F9755;
+
+
+}
+
+.pricing-option p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Student Membership Box Styles */
+.student-membership-box {
+    margin: 40px 0;
+    background-color: #143041;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.student-membership-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.membership-details {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* BMI Popup Styles */
+.bmi-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi-popup-content {
+    background-color: #143041;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    color: #b6d9f0;
+}
+
+.bmi-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
