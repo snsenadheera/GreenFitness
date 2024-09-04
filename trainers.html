@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers - GREEN FITNESS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="icons8-dumbbell-100.png" alt="Logo" class="logo-icon">
+                <span class="logo-text">
+                    <span class="green">GREEN</span>
+                    <span class="blue">FITNESS</span>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="membership.html" class="nav-link">Memberships</a>
+                <a href="trainers.html" class="nav-link">Trainers</a>
+                <a href="shedule.html" class="nav-link">Schedule</a>
+                <a href="profile.php" class="profile-icon">
+                    <img src="user(3).png" alt="Profile">
+                </a>
+            </nav>
+        </header>
+
+        <section class="trainers">
+            <div class="trainertitle">
+                <h1>Meet Our Trainers</h1>
+            </div>
+            <div class="trainer-grid">
+                <div class="trainer-card">
+                    <div class="trainer-card-inner">
+                        <div class="trainer-card-front">
+                            <img src="cbum.jpg" alt="Trainer">
+                        </div>
+                        <div class="trainer-card-back">
+                            <h2 class="trainer-name">Chris Bumstead (C Bum)</h2>
+                            <p class="trainer-title">IFBB Professional Bodybuilder and Mr. Olympia Champion</p>
+                            <p class="trainer-specialization">Professional bodybuilding, strength training, and hypertrophy</p>
+                            <button class="buy-now-btn">Upload</button>
+                            <p class="trainerbuy">
+                              *Please upload the receipt through the email generated and replace the placeholder text in the email with the actual information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-card-inner">
+                        <div class="trainer-card-front">
+                            <img src="sarasafari.jpg" alt="Trainer">
+                        </div>
+                        <div class="trainer-card-back">
+                            <h2 class="trainer-name">Sara Safari</h2>
+                            <p class="trainer-title">Motivational Speaker and Fitness Trainer</p>
+                            <p class="trainer-specialization">Fitness training, motivational coaching, and endurance training</p>
+                            <button class="buy-now-btn">Upload</button>
+                            <p class="trainerbuy">
+                                *Please upload the receipt through the email generated and replace the placeholder text in the email with the actual information.
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="trainers-description">
+                <p>Our trainers are dedicated professionals with extensive experience in fitness and wellness. They specialize in various areas including bodybuilding, endurance training, and motivational coaching. With a focus on personalized workout plans, proper nutrition, and mental resilience, they are committed to helping clients achieve their fitness goals. Our trainers combine rigorous training routines with a holistic approach to health, emphasizing the importance of balance and sustainability. Whether you're a beginner or an advanced athlete, our trainers provide the expertise, support, and inspiration you need to reach your full potential.</p>
+            </section>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2024 GREEN FITNESS. All rights reserved.</p>
+            <p>Email: <a href="mailto:contact@greenfitness.com" class="footer-link">contact@greenfitness.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const trainerContactBtns = document.querySelectorAll('.buy-now-btn');
+    
+        trainerContactBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const subject = 'Student Id :[ENTER YOUR STUDENT ID HERE]  Trainer Name : [ENTER THE TRAINER NAME HERE]';
+            const body = 'Hi GREEN FITNESS,\n\nI am writing to express my keen interest in training under a trainer .\n\nMy student ID is [Enter Your Student ID Here].\n\nI have attached a copy of my payment receipt to this email, confirming that I have made the necessary payment for the training program.\n\nThank you for your time and consideration.\n\nSincerely,\n[ Enter Your Name Here ]';
+    
+            const emailUrl = `mailto:contact@greenfitness.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = emailUrl;
+          });
+        });
+      </script>
+</body>
+</html>
